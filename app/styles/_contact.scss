@@ -1,0 +1,39 @@
+.contact {
+  background-color: $white;
+  padding: 100px 20px;
+
+  @include for-phone-only {
+    padding: 50px 20px;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .form-input,
+    .btn-outline {
+      border-radius: 0;
+      border-color: $brown;
+      color: $brown;
+    }
+    .form-textarea {
+      min-height: 165px;
+    }
+    .btn-outline {
+      &:hover {
+        background-color: $brown;
+        color: $white;
+      }
+    }
+  }
+}
+
+.bannerContact {
+  background: url('../images/contact.jpg') 50% 50%/cover;
+  @include for-phone-only {
+    background: url('../images/contact-m.jpg') 50% 50%/cover;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "probatus",
+  "description": "probatus template",
+  "main": "",
+  "authors": [
+    "kerrongordon <kgpsounds.com@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "siimple": "^1.3.7",
+    "material-design-icons": "^3.0.1"
+  }
+}

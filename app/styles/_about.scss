@@ -1,0 +1,20 @@
+.imgGrid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+
+  img {
+    width: 49%;
+    padding: 20px 0;
+  }
+}
+
+.bannerAbout {
+  background: url('../images/about.jpg') 50% 50%/cover;
+  @include for-phone-only {
+    background: url('../images/about-m.jpg') 50% 50%/cover;
+  }
+}

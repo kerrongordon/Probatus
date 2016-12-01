@@ -40,15 +40,15 @@
   </head>
   <body>
 
-<input type="checkbox" id="menuToggle" value="">
+<input type="checkbox" id="menuToggle" class="menutoggle" value="">
 
   <div class="page-wrap">
 
     <section class="page">
       <section class="hero">
         <div class="overlay"></div>
-        <div class="menu__bar">
-          <span class="site__name">Probatus</span>
+        <div class="menu-bar">
+          <span class="site-name">Probatus</span>
           <menu class="menu">
             <ul>
               <li><a class="menuLink" href="#work">Work</a></li>
@@ -71,7 +71,7 @@
             Class nisl? Aute laboriosam scelerisque montes sed consequat accusamus illum, sociis diamlorem, aperiam assumenda elit nesciunt hymenaeos hic anim sit sunt, proin nunc, quisque! Consequatur animi. Massa sint, provident dapibus? Totam. Amet, lacus purus, consequatur
           </p>
       </section>
-      <section id="about" class="banner bannerAbout">
+      <section id="about" class="banner bannerabout">
         <div class="overlay"></div>
         <h3>About Us</h3>
         <p>
@@ -83,12 +83,12 @@
           <p>
             Class nisl? Aute laboriosam scelerisque montes sed consequat accusamus illum, sociis diamlorem, aperiam assumenda elit nesciunt hymenaeos hic anim sit sunt, proin nunc, quisque!
           </p>
-          <div class="imgGrid">
+          <div class="imggrid">
             <img src="images/about-1.jpg" alt="" />
             <img src="images/about-2.jpg" alt="" />
           </div>
       </section>
-      <section id="contact" class="banner bannerContact">
+      <section id="contact" class="banner bannercontact">
         <div class="overlay"></div>
         <h3>Get In Touch</h3>
         <p>
@@ -97,8 +97,8 @@
       </section>
       <section class="contact">
         <form class="" action="/" method="post">
-          <input type="text" class="form-input" placeholder="Your email">
-          <input type="text" class="form-input" placeholder="Your email">
+          <input type="text" class="form-select" placeholder="Your email">
+          <input type="text" class="form-select" placeholder="Your name">
           <select class="form-select">
             <option>Male</option>
             <option>Female</option>
@@ -137,7 +137,8 @@
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
     </script>
+    <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src="scripts/main.js"></script>
-    <!-- Built with love using Web Starter Kit -->
+    <!-- endbuild -->
   </body>
 </html>

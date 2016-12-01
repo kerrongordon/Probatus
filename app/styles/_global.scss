@@ -3,56 +3,58 @@ body {
 }
 
 .textblock {
-  background-color: $white;
-  padding: 100px 20px;
-
   @include for-phone-only {
     padding: 50px 20px;
   }
 
-  h2 {
-    max-width: 980px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 30px;
-    color: $brown;
+  background-color: $white;
+  padding: 100px 20px;
 
+  h2 {
     @include for-phone-only {
       font-size: 20px;
       font-weight: bold;
-      line-height: 1.5;
       letter-spacing: 1px;
+      line-height: 1.5;
     }
-  }
-  p {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: justify;
-    color: $brown;
 
+    color: $brown;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 980px;
+    text-align: center;
+
+  }
+
+  p {
     @include for-phone-only {
-      text-align: start;
       font-size: 14px;
       font-weight: 400;
+      text-align: start;
     }
+
+    color: $brown;
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: justify;
   }
 }
 
 footer {
-  text-align: center;
-  color: #fff;
-  background-color: $brown;
-  padding: 50px;
-  font-size: 12px;
-  font-weight: 300;
-
   @include for-phone-only {
     padding: 25px 20px;
 
     p {
-      margin: 0
+      margin: 0;
     }
   }
+
+  background-color: $brown;
+  color: $white;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 50px;
+  text-align: center;
 
   a {
     color: $white;
@@ -61,54 +63,56 @@ footer {
 }
 
 .banner {
-  background-color: $brown;
-  padding: 60px 20px;
-  position: relative;
-
   @include for-phone-only {
     padding: 30px 20px;
   }
 
-  h3, p {
-    position: relative;
-    z-index: 1;
-    color: $white;
-    text-align: center;
-  }
-  h3 {
-    font-size: 50px;
+  background-color: $brown;
+  padding: 60px 20px;
+  position: relative;
 
+  h3,
+  p {
+    color: $white;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+
+  h3 {
     @include for-phone-only {
-      margin: 0;
       font-size: 30px;
+      margin: 0;
     }
+
+    font-size: 50px;
   }
 }
 
 .overlay {
-  background: rgba($brown, 0.8);
-  position: absolute;
+  background: $brownlight;
   bottom: 0;
-  right: 0;
   left: 0;
+  position: absolute;
+  right: 0;
   top: 0;
 }
 
 .page {
+  transition: transform .3s;
   z-index: 0;
-  transition: all 0.3s;
 }
 
 .btn-menu {
-  margin: 0;
-  border-radius: 0;
-  padding: 0 10px;
-  border-color: $white;
-  color: $white;
-
   @include for-tablet-portrait-up {
     display: none;
   }
+
+  border-color: $white;
+  border-radius: 0;
+  color: $white;
+  margin: 0;
+  padding: 0 10px;
 
   &:hover {
     background-color: $white;
@@ -121,16 +125,16 @@ footer {
 }
 
 .sidebar {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 180px;
   background-color: $white;
-  box-shadow: inset 2px 0px 5px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s;
+  bottom: 0;
+  box-shadow: inset 2px 0 5px $shadow;
+  position: fixed;
+  right: 0;
+  top: 0;
   transform: translateX(180px);
+  transition: transform .3s;
+  width: 180px;
+  z-index: 999;
 
   ul {
     margin: 0;
@@ -138,17 +142,18 @@ footer {
   }
 
   li {
-    list-style: none;
+    border-bottom: solid 1px $berdercoler;
     display: block;
-    border-bottom: solid 1px rgba(0, 0, 0, 0.16);
+    list-style: none;
     position: relative;
   }
+
   a {
-    display: block;
     color: $brown;
+    display: block;
     padding: 10px;
-    text-indent: 14px;
     text-decoration: none;
+    text-indent: 14px;
 
     &:hover {
       background-color: $brown;
@@ -157,12 +162,13 @@ footer {
   }
 }
 
-#menuToggle {
+.menutoggle {
   display: none;
-  &:checked + .page-wrap {
+
+  &:checked+.page-wrap {
 
     .sidebar {
-      transform: translateX(0px);
+      transform: translateX(0);
     }
 
     .page {

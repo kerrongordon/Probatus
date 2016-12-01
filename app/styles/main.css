@@ -24,11 +24,11 @@ will be correctly compiled during `gulp serve` and `gulp`
 @import "../bower_components/siimple/src/colors";
 @import "../bower_components/siimple/src/base";
 @import "../bower_components/siimple/src/typography";
-/*@import "../bower_components/siimple/src/alert";*/
+@import "../bower_components/siimple/src/alert";
 @import "../bower_components/siimple/src/btn";
-/*@import "../bower_components/siimple/src/code";*/
+@import "../bower_components/siimple/src/code";
 @import "../bower_components/siimple/src/form";
-/*@import "../bower_components/siimple/src/table";*/
+@import "../bower_components/siimple/src/table";
 
 @import "_mixins.scss";
 @import "_color.scss";

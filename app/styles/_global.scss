@@ -1,3 +1,7 @@
+html {
+  background-color: $brown;
+}
+
 body {
   background-color: $white;
 }
@@ -114,14 +118,28 @@ footer {
   margin: 0;
   padding: 0 10px;
 
+  svg {
+    height: 24px;
+    transform: translateY(3px);
+    transition: transform .3s;
+    width: 24px;
+
+    path {
+      fill: $white;
+    }
+  }
+
   &:hover {
     background-color: $white;
     color: $brown;
+
+    svg {
+      path {
+        fill: $brown;
+      }
+    }
   }
 
-  i {
-    margin-top: 6px;
-  }
 }
 
 .sidebar {
